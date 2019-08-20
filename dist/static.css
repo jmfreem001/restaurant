@@ -1,11 +1,25 @@
 body{
   margin:0px;
   background-color: black;
-  display: grid;
+
+
+  /* grid-template-columns: 1fr;
+   /* repeat(4, 1fr);
+  grid-auto-rows: auto; 
   grid-template-areas: 
   "header header header header"
-  "content content content content";
-  grid-template-columns: 1fr;
+  "tabs tabs tabs tabs" */
+}
+
+#content{
+
+  display: grid;
+  grid-template-columns: .02fr 1fr 1fr .02fr;
+ grid-auto-rows: auto;
+ grid-template-areas: 
+ "food header header header flag"
+ "tabs tabs tabs tabs tabs"
+
 }
 .header{
   background: black;
@@ -22,22 +36,37 @@ body{
   font-size: 30px;
 }
 
-.head-image{
+/* .head-image{
   grid-area: head-image;
-}
-.content{
-  grid-area: content;
+} */
+.tabs{
+  grid-area: tabs;
   margin-left:100px;
   margin-right: 100px;
 }
+
+.food{
+  grid-area: food;
+}
+.flag{
+  grid-area: flag;
+}
+
+/* TAB CONTENTS STYLES */
 .tabcontent{
   background-color: rgb(104, 5, 5);
   padding: 2px;
   color: white;
-  height: 160px;
+  height: 160x;
   text-align: center;
 
 }
+.tabcontent img{
+  float: left;
+  width: 35%;
+}
+
+/* TAB STYLES */
 .tab{
   background-color: silver;
   cursor: pointer;
@@ -55,3 +84,4 @@ button{
   background-color: rgb(104, 5, 5);
   color: white;
 }
+

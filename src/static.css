@@ -54,4 +54,5 @@ button{
 .tab:hover{
   background-color: rgb(104, 5, 5);
   color: white;
+  border: .25px solid rgb(104, 5, 5);
 }

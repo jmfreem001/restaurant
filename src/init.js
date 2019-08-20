@@ -1,9 +1,13 @@
+import flag from './italian-flag.jpg';
+import foodPasta from './food-and-pasta-janko-ferlic-.jpg';
 
 function loader() {
 
   let container = document.getElementById('content');
   container.appendChild(header());
-  container.appendChild(content());
+  container.appendChild(tabs());
+  container.appendChild(foodStuff());
+  container.appendChild(italy());
 
 
   return container
@@ -25,10 +29,10 @@ function header(){
 }
 
 
-function content(){
+function tabs(){
   
-  let content = document.createElement('div');
-  content.classList.add('content');
+  let tabs = document.createElement('div');
+  tabs.classList.add('tabs');
   let home = document.createElement('button');
   home.classList.add('tab');
   home.textContent = 'Home';
@@ -42,14 +46,14 @@ function content(){
   contact.classList.add('tab');
   contact.textContent = 'Contact Us';
  
-  content.appendChild(home);
-  content.appendChild(about);
-  content.appendChild(menu);
-  content.appendChild(contact);
+  tabs.appendChild(home);
+  tabs.appendChild(about);
+  tabs.appendChild(menu);
+  tabs.appendChild(contact);
 
-  content.appendChild(tabcontent());
+  tabs.appendChild(tabcontent());
 
-  return content;
+  return tabs;
 }
 
 
@@ -59,6 +63,31 @@ function tabcontent(){
   tabcontent.setAttribute("style", "display: none")
 
   return tabcontent;
+}
+
+function italy(){
+  let italy = document.createElement('div');
+  italy.classList.add('flag');
+
+  let flagImage = new Image(320, 200);
+  flagImage.src = flag;
+  flagImage.alt = "Italian flag";
+  italy.append(flagImage)
+
+  return italy;
+
+}
+
+function foodStuff(){
+  let foodWine = document.createElement('div');
+  foodWine.classList.add('food');
+
+  let food = new Image(250, 320);
+  food.src = foodPasta;
+  food.alt = "Pasta and wine";
+  foodWine.append(food);
+
+  return foodWine;
 }
 
 export default loader;

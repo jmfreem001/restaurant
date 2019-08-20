@@ -1,9 +1,9 @@
 // import './static.css';
 import loader from './init';
-import home from './home';
-import about from './about';
-import menu from './menu';
-import contact from './contact';
+import home from './home/home';
+import about from './about/about';
+import menu from './menu/menu';
+import contact from './contact/contact';
 
 // import makePasta from './making-pasta-mae-mu.jpg';
 
