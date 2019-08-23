@@ -1,16 +1,10 @@
-import flag from './italian-flag.jpg';
-import foodPasta from './food-and-pasta-janko-ferlic-.jpg';
 
 function loader() {
 
   let container = document.getElementById('content');
   container.appendChild(header());
   container.appendChild(tabs());
-  container.appendChild(foodStuff());
-  container.appendChild(italy());
-
-
-  return container
+  return container;
 }
 
 function header(){
@@ -63,31 +57,6 @@ function tabcontent(){
   tabcontent.setAttribute("style", "display: none")
 
   return tabcontent;
-}
-
-function italy(){
-  let italy = document.createElement('div');
-  italy.classList.add('flag');
-
-  let flagImage = new Image(320, 200);
-  flagImage.src = flag;
-  flagImage.alt = "Italian flag";
-  italy.append(flagImage)
-
-  return italy;
-
-}
-
-function foodStuff(){
-  let foodWine = document.createElement('div');
-  foodWine.classList.add('food');
-
-  let food = new Image(250, 320);
-  food.src = foodPasta;
-  food.alt = "Pasta and wine";
-  foodWine.append(food);
-
-  return foodWine;
 }
 
 export default loader;

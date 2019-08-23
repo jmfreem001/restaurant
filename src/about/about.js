@@ -6,9 +6,8 @@ function about(){
   tabcontent.setAttribute('style', "display:block;")
   let text = document.createElement('p');
   text.innerHTML = "We are committed to serving only the best quality ingredients." + 
-  "Our chef scours local markets and ................................................................................................................."+
-  ".................................................................................."
-
+  "\nOur chef, Peter Generico (pictured), scours local markets to ensure only the best quality ingredients make it to your plate."+
+  "\nOur interior decor brings to together the elegance of Paris with the Old World charm of Mama Generico's childhood home."
 
   let image = new Image();
   image.src = chef;

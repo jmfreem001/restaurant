@@ -5,9 +5,6 @@ import about from './about/about';
 import menu from './menu/menu';
 import contact from './contact/contact';
 
-// import makePasta from './making-pasta-mae-mu.jpg';
-
-
 loader()
 
 const buttons = document.querySelectorAll('.tab')
@@ -39,5 +36,4 @@ function clear(){
     tabcontent.removeChild(tabcontent.children[0]);
   }
   tabcontent.setAttribute("style", "display: none")
-
 }
